@@ -1,4 +1,4 @@
-package com.salaryup.board.domain;
+package com.salaryup.lazyboot.board.domain;
 
 public class BoardVO {
 

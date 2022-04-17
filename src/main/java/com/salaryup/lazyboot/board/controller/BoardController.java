@@ -1,7 +1,7 @@
-package com.salaryup.board.controller;
+package com.salaryup.lazyboot.board.controller;
 
-import com.salaryup.board.domain.BoardVO;
-import com.salaryup.board.service.BoardRepository;
+import com.salaryup.lazyboot.board.domain.BoardVO;
+import com.salaryup.lazyboot.board.service.BoardRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -18,8 +18,8 @@ public class BoardController {
 
     @GetMapping("/board")
     public String fileTest(Model model, BoardVO boardVO){
-        //List<BoardVO> list = boardRepository.selectTest(boardVO);
-        //model.addAttribute("data",list);
+        List<BoardVO> list = boardRepository.selectTest(boardVO);
+        model.addAttribute("data",list);
         return "board/board";
     };
 

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.salaryup.lazyboot.board.mapper.BoardMapper">
+    <select id="selectTest" resultType="boardVO" >
+        SELECT '1' boardNo
+    </select>
+
+    <insert id="boardInsert" parameterType="BoardVO"  >
+        INSERT INTO BOARD (BOARD_NO,CONTENT,REG_DT)
+        VALUES (BOARD_SEQ.NEXTVAL,#{content},sysdate)
+        <selectKey keyProperty="boardNo" resultType="String" order="AFTER">
+            SELECT MAX(BOARD_NO) FROM BOARD
+        </selectKey>
+    </insert>
+
+    <insert id="insertTag" parameterType="String">
+        MERGE INTO TAG A
+            USING (SELECT  #{name} AS NAME
+                   FROM dual
+            ) B
+            ON (A.NAME = B.NAME)
+            WHEN NOT MATCHED THEN
+                INSERT(
+                       NAME
+                    )
+                    VALUES(
+                              B.NAME
+                          )
+    </insert>
+
+    <delete id="deleteBoardTag" parameterType="String">
+        DELETE FROM BOARD_TAG WHERE BOARD_NO = #{boardNo}
+    </delete>
+
+    <insert id="boardTagInsert" parameterType="BoardVO"  >
+        INSERT INTO BOARD_TAG (BOARD_NO,TAG_NAME)
+        VALUES (#{boardNo},#{tag})
+    </insert>
+</mapper>
