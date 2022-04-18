@@ -29,6 +29,7 @@ dependencies {
 	runtimeOnly 'mysql:mysql-connector-java'
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	implementation group: 'org.sitemesh', name: 'sitemesh', version: '3.0.1'
 }
 
 tasks.named('test') {
