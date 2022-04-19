@@ -9,17 +9,17 @@ import java.util.List;
 @Service
 public class MemoryBoardRepository implements BoardRepository {
 
-    @Autowired
-    public BoardMapper mapper;
+    /*@Autowired
+    public BoardMapper mapper;*/
 
     @Override
     public List<BoardVO>  selectTest(BoardVO boardVO) {
-        return mapper.selectTest(boardVO);
+        return /*mapper.selectTest(boardVO);*/ null;
     }
 
     @Override
     public void boardInsert(BoardVO boardVO) {
-        if(boardVO.getBoardNo() == null || "".equals(boardVO.getBoardNo())) {
+        /*if(boardVO.getBoardNo() == null || "".equals(boardVO.getBoardNo())) {
             mapper.boardInsert(boardVO);
         }else{
             //업데이트 필요
@@ -29,6 +29,6 @@ public class MemoryBoardRepository implements BoardRepository {
             mapper.insertTag(name);
             boardVO.setTag(name);
             mapper.boardTagInsert(boardVO);
-        }
+        }*/
     }
 }
