@@ -4,14 +4,21 @@
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
       >
 <head>
-<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-<title>웃는 시체들의 산(The Mountain of Smiling Bodies)T-01-75</title>
+      <link rel="stylesheet" href="/css/bootstrap.css">
+      <link rel="stylesheet" href="/css/custom.css">
+      <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+      <script src="/js/bootstrap.bundle.min.js"></script>
+<title>lazy Project 게으름 예약시스템</title>
 </head>
 <body>
       <header th:replace="fragments/head :: headFragment"></header>
       <!--<img src="/images/smile.png" >-->
-      <div layout:fragment="content"></div>
+      <div class="container">
+            <div layout:fragment="content"></div>
 
-      <footer th:replace="fragments/footer :: footerFragment"></footer>
+
+
+            <footer th:replace="fragments/footer :: footerFragment"></footer>
+      </div>
 </body>
 </html>

@@ -20,6 +20,8 @@ public class BoardController {
     public String fileTest(Model model, BoardVO boardVO){
         List<BoardVO> list = boardRepository.selectTest(boardVO);
         model.addAttribute("data",list);
+
+
         return "board/board";
     };
 
