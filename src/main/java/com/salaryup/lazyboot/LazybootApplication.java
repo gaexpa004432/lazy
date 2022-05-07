@@ -11,8 +11,9 @@ public class LazybootApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(LazybootApplication.class, args);
-
 	}
 
 
+
 }
+
