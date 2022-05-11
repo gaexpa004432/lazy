@@ -1,10 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layouts/layout}">
 <head>
+    <title>CMS</title>
     <meta charset="UTF-8">
-    <title>Title</title>
 </head>
 <body>
+<th:block layout:fragment="content">
 관리자 메인입니다.
+</th:block>
 </body>
 </html>
