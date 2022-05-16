@@ -1,0 +1,25 @@
+<html>
+<head>
+    <title>2022 FE 데브매칭</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="keyEvent.js"></script>
+<body>
+<main class="App">
+    <div class="SelectedLanguage">
+        <ul class="topViewKeyword">
+
+        </ul>
+    </div>
+    <form class="SearchInput" onsubmit="return false;">
+        <input class="SearchInput__input" type="text" id="serchKeyword" placeholder="프로그램 언어를 입력하세요." value="" autocomplete="off">
+    </form>
+    <div class="Suggestion" style="display: none;">
+        <ul class="viewKeyword">
+
+        </ul>
+    </div>
+</main>
+</body>
+</html>
