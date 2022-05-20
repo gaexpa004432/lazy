@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script>
+  fetch("/admin/test", {
+    method: 'post',
+    headers: {
+      'content-type': 'application/json',
+      'Authorization': 'Bearer '
+    },
+    body : JSON.stringify({
+      name : "gg",
+      pwd : "ss"
+    })
+  }).then(res => res.json())
+          .then(token => {
+            /*localStorage.setItem("jwt",token.accessToken)
+            alert("로그인 되었습니다");*/
+              console.log(token);
+          });
+</script>
+<body>
+
+</body>
+</html>
