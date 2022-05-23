@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import java.util.HashMap;
 
 @Controller
@@ -25,11 +26,11 @@ public class TestController {
 
     @RequestMapping("/admin/test")
     @ResponseBody
-    public String menuMain(Model model,MenuVO menuVO, HttpServletRequest request){
+    public String menuMain(Model model, MenuVO menuVO, HttpServletRequest request, HttpSession session){
 
         String token = jwtTokenProvider.makeJwtToken();
         // 세션에 저장?
-
+        session.setAttribute("token",token);
         HashMap<String,String> map = new HashMap<String,String>();
         map.put("result","true");
         try {
