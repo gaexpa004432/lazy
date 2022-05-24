@@ -22,11 +22,18 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
     implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation group: 'nz.net.ultraq.thymeleaf', name: 'thymeleaf-layout-dialect', version: '3.0.0'
+    implementation 'io.jsonwebtoken:jjwt:0.9.1'
+    implementation group: 'com.h2database', name: 'h2', version: '2.1.210'
+    implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:2.2.2'
+    implementation group: 'org.lazyluke', name: 'log4jdbc-remix', version: ':0.2.7'
+
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+
     compileOnly 'org.projectlombok:lombok'
     annotationProcessor 'org.projectlombok:lombok'
     developmentOnly 'org.springframework.boot:spring-boot-devtools'
-    testImplementation 'org.springframework.boot:spring-boot-starter-test'
-    implementation 'io.jsonwebtoken:jjwt:0.9.1'
+
 
 }
 

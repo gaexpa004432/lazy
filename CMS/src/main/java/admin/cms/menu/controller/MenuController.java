@@ -1,6 +1,8 @@
 package admin.cms.menu.controller;
 
 import admin.cms.menu.domain.MenuVO;
+import admin.cms.menu.service.MenuService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
@@ -27,9 +29,12 @@ import java.util.List;
 @Controller
 public class MenuController {
 
+    @Autowired
+    MenuService menuService;
+
     @RequestMapping("/admin/menu")
     public String menuMain(MenuVO menuVO , Model model){
-
+        System.out.println(menuService.selectTest());
         return "menu/menu";
     }
 
