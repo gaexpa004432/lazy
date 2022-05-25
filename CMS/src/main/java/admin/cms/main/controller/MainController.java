@@ -9,7 +9,6 @@ public class MainController {
 
     @RequestMapping("/admin/main")
     public String adminMain(Model model){
-
         return "main/main";
     };
 

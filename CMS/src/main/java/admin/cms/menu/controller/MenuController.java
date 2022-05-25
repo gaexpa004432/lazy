@@ -32,7 +32,7 @@ public class MenuController {
     @Autowired
     MenuService menuService;
 
-    @RequestMapping("/admin/menu")
+    @RequestMapping("/cms/menu")
     public String menuMain(MenuVO menuVO , Model model){
         System.out.println(menuService.selectTest());
         return "menu/menu";
