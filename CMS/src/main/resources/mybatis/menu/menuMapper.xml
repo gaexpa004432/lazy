@@ -4,4 +4,10 @@
     <select id="selectTest" resultType="menuVO" >
         SELECT '1' menuId from dual
     </select>
+
+    <select id="selectMenu" parameterType="menuVO" resultType="menuVO" >
+        SELECT  *
+          from  CMS_MENU
+    </select>
+
 </mapper>

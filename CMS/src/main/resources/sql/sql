@@ -1,1 +1,29 @@
-CREATE TABLE CMS_MENU (MENU_ID         VARCHAR(30)      NOT NULL,   MENU_TYPE       VARCHAR(10)          NULL,   MENU_GBN        VARCHAR(10)          NULL,   MENU_LEVEL      NUMBER                    NULL,   MENU_NAME_KO    VARCHAR(50)          NULL,   MENU_NAME_EN    VARCHAR(50)          NULL,   MENU_NAME_CN    VARCHAR(50)          NULL,   MENU_NAME_JP    VARCHAR(50)          NULL,   PARENT_MENU     VARCHAR(30)          NULL,   MENU_URL        VARCHAR(500)         NULL,   CONTENT_ID      VARCHAR(30)          NULL,   BOARD_ID        VARCHAR(30)          NULL,   USE_YN          VARCHAR(10)          NULL,   BLANK_YN        VARCHAR(2)           NULL,   SORT_ORDER      NUMBER                    NULL,   REG_ID          VARCHAR(30)          NULL,   REG_DT          DATE                      NULL,   UPD_ID          VARCHAR(30)          NULL,   UPD_DT          DATE                      NULL,   MENU_YN         VARCHAR(2)           NULL,   MENU_ICON       VARCHAR(30)          NULL,   DEL_YN          VARCHAR(2)           NULL,   IS_LOGIN        VARCHAR(10)          NULL,   BOARD_ID_EN     VARCHAR(30)          NULL,   BOARD_ID_CN     VARCHAR(30)          NULL,   BOARD_ID_JP     VARCHAR(30)          NULL)
+H2 DB CREATE TABLE CMS_MENU (MENU_ID         VARCHAR(30)      NOT NULL,   MENU_TYPE       VARCHAR(10)          NULL,   MENU_GBN        VARCHAR(10)          NULL,   MENU_LEVEL      NUMBER                    NULL,   MENU_NAME_KO    VARCHAR(50)          NULL,   MENU_NAME_EN    VARCHAR(50)          NULL,   MENU_NAME_CN    VARCHAR(50)          NULL,   MENU_NAME_JP    VARCHAR(50)          NULL,   PARENT_MENU     VARCHAR(30)          NULL,   MENU_URL        VARCHAR(500)         NULL,   CONTENT_ID      VARCHAR(30)          NULL,   BOARD_ID        VARCHAR(30)          NULL,   USE_YN          VARCHAR(10)          NULL,   BLANK_YN        VARCHAR(2)           NULL,   SORT_ORDER      NUMBER                    NULL,   REG_ID          VARCHAR(30)          NULL,   REG_DT          DATE                      NULL,   UPD_ID          VARCHAR(30)          NULL,   UPD_DT          DATE                      NULL,   MENU_YN         VARCHAR(2)           NULL,   MENU_ICON       VARCHAR(30)          NULL,   DEL_YN          VARCHAR(2)           NULL,   IS_LOGIN        VARCHAR(10)          NULL,   BOARD_ID_EN     VARCHAR(30)          NULL,   BOARD_ID_CN     VARCHAR(30)          NULL,   BOARD_ID_JP     VARCHAR(30)          NULL);
+mysql CREATE TABLE CMS_MENU (
+             MENU_ID      VARCHAR(30) NOT NULL,
+             MENU_TYPE    VARCHAR(10) NULL,
+             MENU_GBN     VARCHAR(10) NULL,
+             MENU_LEVEL   int NULL,
+             MENU_NAME_KO VARCHAR(50) NULL,
+             MENU_NAME_EN VARCHAR(50) NULL,
+             MENU_NAME_CN VARCHAR(50) NULL,
+             MENU_NAME_JP VARCHAR(50) NULL,
+             PARENT_MENU  VARCHAR(30) NULL,
+             MENU_URL     VARCHAR(500) NULL,
+             CONTENT_ID   VARCHAR(30) NULL,
+             BOARD_ID     VARCHAR(30) NULL,
+             USE_YN       VARCHAR(10) NULL,
+             BLANK_YN     VARCHAR(2) NULL,
+             SORT_ORDER   int NULL,
+             REG_ID       VARCHAR(30) NULL,
+             REG_DT       DATE NULL,
+             UPD_ID       VARCHAR(30) NULL,
+             UPD_DT       DATE NULL,
+             MENU_YN      VARCHAR(2) NULL,
+             MENU_ICON    VARCHAR(30) NULL,
+             DEL_YN       VARCHAR(2) NULL,
+             IS_LOGIN     VARCHAR(10) NULL,
+             BOARD_ID_EN  VARCHAR(30) NULL,
+             BOARD_ID_CN  VARCHAR(30) NULL,
+             BOARD_ID_JP  VARCHAR(30) NULL
+      );

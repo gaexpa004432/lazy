@@ -35,6 +35,7 @@ public class MenuController {
     @RequestMapping("/cms/menu")
     public String menuMain(MenuVO menuVO , Model model){
         System.out.println(menuService.selectTest());
+        List<MenuVO> menuList = menuService.selectMenu(menuVO);
         return "menu/menu";
     }
 
