@@ -2,12 +2,12 @@ package com.salaryup.lazyboot.board.mapper;
 
 import com.salaryup.lazyboot.board.domain.BoardVO;
 import org.apache.ibatis.annotations.Mapper;
-import org.springframework.stereotype.Repository;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 
-@Repository
 @Mapper
+@Component
 public interface BoardMapper {
 
     List<BoardVO> selectTest(BoardVO boardVO);

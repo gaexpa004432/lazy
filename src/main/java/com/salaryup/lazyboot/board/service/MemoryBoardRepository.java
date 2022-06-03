@@ -9,8 +9,8 @@ import java.util.List;
 @Service
 public class MemoryBoardRepository implements BoardRepository {
 
-    /*@Autowired
-    public BoardMapper mapper;*/
+    @Autowired
+    public BoardMapper mapper;
 
     @Override
     public List<BoardVO>  selectTest(BoardVO boardVO) {
